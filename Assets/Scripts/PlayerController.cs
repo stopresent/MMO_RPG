@@ -9,13 +9,19 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Managers mg = Managers.Instance;
+        Managers.Input.KeyAction -= OnKeyboard;
+        Managers.Input.KeyAction += OnKeyboard;
     }
 
 
     void Update()
     {
 
+        
+    }
+
+    void OnKeyboard()
+    {
         if (Input.GetKey(KeyCode.W))
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), 0.3f);
@@ -36,6 +42,5 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.3f);
             transform.position += Vector3.right * _speed * Time.deltaTime;
         }
-
     }
 }
