@@ -8,6 +8,7 @@ public class HelloUnity : MonoBehaviour
     void Start()
     {
         Debug.Log("Hello Unity");
+        Debug.Log("test1");
     }
 
     // Update is called once per frame
