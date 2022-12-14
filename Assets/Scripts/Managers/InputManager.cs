@@ -13,7 +13,7 @@ public class InputManager
 
     public void OnUpdate()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject()) // UI가 클릭되었다면 return
             return;
 
         if (Input.anyKey && KeyAction != null)
