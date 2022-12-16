@@ -11,7 +11,7 @@ public class ResourceManager
             string name = path;
             int index = name.LastIndexOf('/');
             if (index >= 0)
-                name = name.Substring(0, index + 1);
+                name = name.Substring(index + 1);
 
             GameObject go = Managers.Pool.GetOriginal(name);
             if (go != null)
