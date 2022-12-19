@@ -13556,6 +13556,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4621519625842920811, guid: e415e530d0f46174e9817624f1920ed8, type: 3}
+      propertyPath: m_Radius
+      value: 0.2188677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621519625842920811, guid: e415e530d0f46174e9817624f1920ed8, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0025480837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621519625842920811, guid: e415e530d0f46174e9817624f1920ed8, type: 3}
+      propertyPath: m_Center.z
+      value: -0.10725494
+      objectReference: {fileID: 0}
     - target: {fileID: 6317314410679702449, guid: e415e530d0f46174e9817624f1920ed8, type: 3}
       propertyPath: m_Name
       value: Robot Kyle
@@ -13613,6 +13625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7134341720104795088, guid: 68d25bf198e55a1419ee2642b08e06f4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7134341720112171350, guid: 68d25bf198e55a1419ee2642b08e06f4, type: 3}
       propertyPath: m_Name
       value: UnityChan
