@@ -15,6 +15,7 @@ public class MonsterController : BaseController
 
     public override void Init()
     {
+        Define.WorldObject type = Define.WorldObject.Monster;
         _stat = gameObject.GetComponent<Stat>();
 
         if (gameObject.GetComponentInChildren<UI_HPBar>() == null)
@@ -92,6 +93,11 @@ public class MonsterController : BaseController
             Stat playerStat = gameObject.GetComponent<Stat>();
             int damage = playerStat.Attack - targetStat.Defence;
             targetStat.Hp -= damage;
+
+            if (targetStat.Hp <= 0)
+            {
+                Managers.Game.Despawn(targetStat.gameObject);
+            }
 
             if (targetStat.Hp > 0)
             {
