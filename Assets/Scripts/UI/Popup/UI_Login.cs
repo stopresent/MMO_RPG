@@ -16,10 +16,6 @@ enum Texts
 
 public class UI_Login : UI_Popup
 {
-    private void Start()
-    {
-        Init();
-    }
     public override void Init()
     {
         Bind<Button>(typeof(Buttons));
