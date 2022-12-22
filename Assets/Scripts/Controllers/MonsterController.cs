@@ -60,9 +60,9 @@ public class MonsterController : BaseController
     }
 
     protected override void UpdateIdle() 
-    { 
+    {
         // 매니저가 생기면 옮기자
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = Managers.Game.GetPlayer();
         if (player == null)
             return;
 
@@ -90,9 +90,7 @@ public class MonsterController : BaseController
         if (_lockTarget != null)
         {
             Stat targetStat = _lockTarget.GetComponent<Stat>();
-            Stat playerStat = gameObject.GetComponent<Stat>();
-            int damage = playerStat.Attack - targetStat.Defence;
-            targetStat.Hp -= damage;
+            targetStat.OnAttaked(_stat);
 
             if (targetStat.Hp <= 0)
             {
