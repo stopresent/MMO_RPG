@@ -15,9 +15,9 @@ public class SpawningPool : MonoBehaviour
     [SerializeField]
     Vector3 _spawnPos;
     [SerializeField]
-    float _spawnRadius = 20.0f;
+    float _spawnRadius = 40.0f;
     [SerializeField]
-    float _spawnTime = 5.0f;
+    float _spawnTime = 10.0f;
 
     public void AddMonsterCount(int value) { _monsterCount += value; }
     public void SetKeepMonsterCount(int count) { _keepMonsterCount = count; }
@@ -28,20 +28,20 @@ public class SpawningPool : MonoBehaviour
         Managers.Game.OnSpawnEvent += AddMonsterCount;
     }
 
-
     void Update()
     {
-        while (_reserveCount + _monsterCount < _keepMonsterCount)
+        if (_reserveCount + _monsterCount < _keepMonsterCount)
         {
-            StartCoroutine("ReserveSpawn");
+            StartCoroutine("ReserveSpawn", _spawnTime);
         }
     }
 
     IEnumerator ReserveSpawn()
     {
         _reserveCount++;
-        yield return new WaitForSeconds(Random.Range(0, _spawnTime));
+        yield return new WaitForSeconds(Random.Range(3, _spawnTime));
         GameObject go = Managers.Game.Spawn(Define.WorldObject.Monster, "Robot Kyle");
+
         NavMeshAgent nma = go.GetOrAddComponent<NavMeshAgent>();
 
         Vector3 randPos;

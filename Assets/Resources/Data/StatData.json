@@ -9,62 +9,62 @@
     {
       "level": "2",
       "maxHp": "250",
-      "attack": "25",
-      "totalExp": "10"
+      "attack": "30",
+      "totalExp": "5"
     },
     {
       "level": "3",
       "maxHp": "300",
-      "attack": "30",
-      "totalExp": "20"
+      "attack": "40",
+      "totalExp": "10"
     },
     {
       "level": "4",
       "maxHp": "400",
-      "attack": "35",
-      "totalExp": "30"
+      "attack": "45",
+      "totalExp": "20"
     },
     {
       "level": "5",
       "maxHp": "500",
       "attack": "50",
-      "totalExp": "40"
+      "totalExp": "30"
     },
     {
       "level": "6",
       "maxHp": "600",
       "attack": "60",
-      "totalExp": "50"
+      "totalExp": "40"
     },
     {
       "level": "7",
       "maxHp": "700",
       "attack": "70",
-      "totalExp": "60"
+      "totalExp": "50"
     },
     {
       "level": "8",
       "maxHp": "800",
       "attack": "80",
-      "totalExp": "70"
+      "totalExp": "60"
     },
     {
       "level": "9",
       "maxHp": "900",
       "attack": "90",
-      "totalExp": "80"
+      "totalExp": "70"
     },
     {
       "level": "10",
       "maxHp": "1000",
       "attack": "999",
-      "totalExp": "90"
+      "totalExp": "80"
     },
     {
       "level": "11",
       "maxHp": "999999",
       "attack": "99999",
-      "totalExp": "99"
+      "totalExp": "9999"
     }
   ]
 } 

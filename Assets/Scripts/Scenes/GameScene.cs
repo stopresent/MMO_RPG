@@ -20,7 +20,7 @@ public class GameScene : BaseScene
         //Managers.Game.Spawn(Define.WorldObject.Monster, "Robot Kyle");
         GameObject go = new GameObject { name = "@Robot Kyle Pool" };
         SpawningPool pool = go.GetOrAddComponent<SpawningPool>();
-        pool.SetKeepMonsterCount(5);
+        pool.SetKeepMonsterCount(100);
     }
 
     public override void Clear()
